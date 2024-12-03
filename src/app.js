@@ -10,6 +10,7 @@ const config = require("./config/config");
 const morgan = require("./config/morgan");
 const { errorConverter, errorHandler } = require("./middlewares/error");
 const ApiError = require("./utils/ApiError");
+const routes = require("./routes");
 
 const app = express();
 
@@ -38,6 +39,9 @@ app.use(compression());
 // enable cors
 app.use(cors());
 app.options("*", cors());
+
+// Use your API routes
+app.use("/api/v1", routes);
 
 // Static file serving (Make sure `client/out` exists)
 app.use(express.static(path.resolve(__dirname, "public")));
