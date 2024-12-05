@@ -58,7 +58,7 @@ const sendResetPasswordEmail = async (emailSubject, to, token, name) => {
     const subject = emailSubject;
     const text = `Dear ${name},
       To reset your password, please enter this OTP :
-      ${token.token}
+      ${token}
       If you did not request any password resets, please check your account as soon as possible.`;
     await sendEmail(to, subject, text);
   } catch (error) {
