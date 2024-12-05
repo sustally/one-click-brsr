@@ -10,6 +10,7 @@ const createUserRoute = require("./userRoutes/createUserRoute/createUser.route")
 const generateCreatePasswordOtpRoute = require("./userRoutes/generateCreatePasswordOtpRoute/generateCreatePasswordOtp.route");
 const verifyCreatePasswordOtpRoute = require("./userRoutes/verifyCreatePasswordOtpRoute/verifyCreatePasswordOtp.route");
 const generateForgotPasswordOtpRoute = require("./userRoutes/generateForgotPasswordOtpRoute/generateForgotPasswordOtp.route");
+const loginUserRoute = require("./userRoutes/loginUserRoute/loginUser.route");
 
 //------------------------- Super Admin Routes -----------------------
 app.use("/superAdmin", createSuperAdminRoute);
@@ -20,5 +21,6 @@ app.use("/superAdmin", createUserRoute);
 app.use("/user", generateCreatePasswordOtpRoute);
 app.use("/user", verifyCreatePasswordOtpRoute);
 app.use("/user", generateForgotPasswordOtpRoute);
+app.use("/user", loginUserRoute);
 
 module.exports = app;
