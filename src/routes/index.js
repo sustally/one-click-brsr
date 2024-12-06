@@ -16,6 +16,7 @@ const loginUserRoute = require("./userRoutes/loginUserRoute/loginUser.route");
 const createVariableRoute = require("./variableRoutes/createVariableRoute/createVariable.route");
 const getVariableByUserIdRoute = require("./variableRoutes/getVariableByUserIdRoute/getVariableByUserId.route");
 const getVariableByVariableIdRoute = require("./variableRoutes/getVariableByVariableIdRoute/getVariableByVariableId.route");
+const updateVariableRoute = require("./variableRoutes/updateVariableRoute/updateVariable.route");
 
 //------------------------- Super Admin Routes -----------------------
 app.use("/superAdmin", createSuperAdminRoute);
@@ -32,5 +33,6 @@ app.use("/user", loginUserRoute);
 app.use("/variable", createVariableRoute);
 app.use("/variable", getVariableByUserIdRoute);
 app.use("/variable", getVariableByVariableIdRoute);
+app.use("/variable", updateVariableRoute);
 
 module.exports = app;
