@@ -23,6 +23,7 @@ const deleteVariableRoute = require("./variableRoutes/deleteVariableRoute/delete
 const createTableRoute = require("./tableRoutes/createTableRoute/createTable.route");
 const getTableByTableIdRoute = require("./tableRoutes/getTableByTableIdRoute/getTableByTableId.route");
 const getTableByUserIdRoute = require("./tableRoutes/getTableByUserIdRoute/getTableByUserId.route");
+const updateTableRoute = require("./tableRoutes/updateTableRoute/updateTable.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -47,5 +48,6 @@ app.use("/variable", deleteVariableRoute);
 app.use("/table", createTableRoute);
 app.use("/table", getTableByTableIdRoute);
 app.use("/table", getTableByUserIdRoute);
+app.use("/table", updateTableRoute);
 
 module.exports = app;
