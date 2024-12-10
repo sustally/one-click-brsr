@@ -21,6 +21,7 @@ const deleteVariableRoute = require("./variableRoutes/deleteVariableRoute/delete
 
 //---------------------------------- Table ------------------------------------------
 const createTableRoute = require("./tableRoutes/createTableRoute/createTable.route");
+const getTableByTableIdRoute = require("./tableRoutes/getTableByTableIdRoute/getTableByTableId.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -43,5 +44,6 @@ app.use("/variable", deleteVariableRoute);
 
 //------------------------------- Table -----------------------------------
 app.use("/table", createTableRoute);
+app.use("/table", getTableByTableIdRoute);
 
 module.exports = app;
