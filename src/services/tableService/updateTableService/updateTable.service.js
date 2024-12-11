@@ -3,6 +3,7 @@ const ApiError = require("../../../utils/ApiError");
 const User = require("../../../models/userModel/user.model");
 const Table = require("../../../models/tableModel/table.model");
 const logger = require("../../../config/logger");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const updateTable = async (tableBody, tableId, userId) => {
   try {
@@ -14,6 +15,19 @@ const updateTable = async (tableBody, tableId, userId) => {
         httpStatus.UNAUTHORIZED,
         "You do not have permission to perform this action"
       );
+    }
+
+    const normalizedTableName = normalizeString(tableBody.tableName);
+
+    const duplicateTable = await Table.findOne({
+      userId: userId,
+      tableName: normalizedTableName,
+      tableId: { $ne: tableId },
+    }).collation({ locale: "en", strength: 2 });
+
+    if (duplicateTable) {
+      logger.error("Table already exists");
+      throw new ApiError(httpStatus.NOT_FOUND, "Table already exists");
     }
 
     const table = await Table.findOne({ tableId: tableId, userId: userId });
