@@ -4,6 +4,7 @@ const User = require("../../../models/userModel/user.model");
 const Table = require("../../../models/tableModel/table.model");
 const logger = require("../../../config/logger");
 const { v4: uuid } = require("uuid");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const createTable = async (tableBody, userId) => {
   try {
@@ -15,6 +16,18 @@ const createTable = async (tableBody, userId) => {
         httpStatus.UNAUTHORIZED,
         "You do not have permission to perform this action"
       );
+    }
+
+    const normalizedTableName = normalizeString(tableBody.tableName);
+
+    const duplicateTable = await Table.findOne({
+      userId: userId,
+      tableName: normalizedTableName,
+    }).collation({ locale: "en", strength: 2 });
+
+    if (duplicateTable) {
+      logger.error("Table already exists");
+      throw new ApiError(httpStatus.NOT_FOUND, "Table already exists");
     }
 
     const columnId = uuid();
