@@ -4,6 +4,7 @@ const User = require("../../../models/userModel/user.model");
 const Variable = require("../../../models/variableModel/variable.model");
 const logger = require("../../../config/logger");
 const { v4: uuid } = require("uuid");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const createVariable = async (variableBody, userId) => {
   try {
@@ -15,6 +16,23 @@ const createVariable = async (variableBody, userId) => {
         httpStatus.UNAUTHORIZED,
         "You do not have permission to perform this action"
       );
+    }
+
+    const normalizedVariableName = normalizeString(variableBody.variableName);
+
+    const duplicateVariable = await Variable.findOne(
+      {
+        userId: userId,
+        variables: {
+          $elemMatch: { variableName: normalizedVariableName },
+        },
+      },
+      { "variables.$": 1 }
+    ).collation({ locale: "en", strength: 2 });
+
+    if (duplicateVariable) {
+      logger.error("Variable already exists");
+      throw new ApiError(httpStatus.NOT_FOUND, "Variable already exists");
     }
 
     const checkVariable = await Variable.findOne({ userId: userId });
