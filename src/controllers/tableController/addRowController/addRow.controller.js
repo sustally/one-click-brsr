@@ -10,7 +10,7 @@ const logger = require("../../../config/logger");
 const addRow = catchAsync(async (req, res) => {
   try {
     logger.info("add row API called");
-    const table = await addRowService.addRow(
+    const row = await addRowService.addRow(
       req.body,
       req.id,
       req.params.tableId
@@ -22,7 +22,7 @@ const addRow = catchAsync(async (req, res) => {
         successResponseGenerator(
           httpStatus.CREATED,
           "row added successfully",
-          table
+          row
         )
       );
   } catch (error) {

@@ -24,13 +24,11 @@ const addColumn = async (columnBody, userId, tableId) => {
     }
     const columnId = uuid();
 
-    // Push the new column to the columns array
     table.columns.push({
       name: columnBody.columnName,
       columnId: columnId,
     });
 
-    // Save the updated matrix
     const addColumn = await table.save();
     if (!addColumn) {
       logger.error("Something went wrong");

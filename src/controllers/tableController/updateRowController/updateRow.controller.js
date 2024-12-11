@@ -10,7 +10,7 @@ const logger = require("../../../config/logger");
 const updateRow = catchAsync(async (req, res) => {
   try {
     logger.info("update row API called");
-    const column = await updateRowService.updateRow(
+    const row = await updateRowService.updateRow(
       req.body,
       req.id,
       req.params.tableId,
@@ -23,7 +23,7 @@ const updateRow = catchAsync(async (req, res) => {
         successResponseGenerator(
           httpStatus.CREATED,
           "row updated successfully",
-          column
+          row
         )
       );
   } catch (error) {

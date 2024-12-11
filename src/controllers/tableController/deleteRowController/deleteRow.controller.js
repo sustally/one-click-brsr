@@ -10,7 +10,7 @@ const logger = require("../../../config/logger");
 const deleteRow = catchAsync(async (req, res) => {
   try {
     logger.info("delete row API called");
-    const table = await deleteRowService.deleteRow(
+    const row = await deleteRowService.deleteRow(
       req.id,
       req.params.tableId,
       req.query.rowId
@@ -22,7 +22,7 @@ const deleteRow = catchAsync(async (req, res) => {
         successResponseGenerator(
           httpStatus.CREATED,
           "row deleted successfully",
-          table
+          row
         )
       );
   } catch (error) {

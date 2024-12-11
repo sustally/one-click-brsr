@@ -30,7 +30,7 @@ const deleteTable = async (tableId, userId) => {
       logger.error("Something went wrong while update table");
       throw new ApiError(
         httpStatus.INTERNAL_SERVER_ERROR,
-        "Something went wrong ehile update table"
+        "Something went wrong while update table"
       );
     }
   } catch (error) {

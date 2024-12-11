@@ -10,7 +10,7 @@ const logger = require("../../../config/logger");
 const addColumn = catchAsync(async (req, res) => {
   try {
     logger.info("add column API called");
-    const table = await addColumnService.addColumn(
+    const column = await addColumnService.addColumn(
       req.body,
       req.id,
       req.params.tableId
@@ -22,7 +22,7 @@ const addColumn = catchAsync(async (req, res) => {
         successResponseGenerator(
           httpStatus.CREATED,
           "column added successfully",
-          table
+          column
         )
       );
   } catch (error) {
