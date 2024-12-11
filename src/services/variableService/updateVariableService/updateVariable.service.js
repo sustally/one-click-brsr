@@ -3,6 +3,7 @@ const ApiError = require("../../../utils/ApiError");
 const User = require("../../../models/userModel/user.model");
 const Variable = require("../../../models/variableModel/variable.model");
 const logger = require("../../../config/logger");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const updateVariable = async (variableBody, userId, variableId) => {
   try {
@@ -15,6 +16,27 @@ const updateVariable = async (variableBody, userId, variableId) => {
         "You do not have permission to perform this action"
       );
     }
+
+    const normalizedVariableName = normalizeString(variableBody.variableName);
+
+    const duplicateVariable = await Variable.findOne(
+      {
+        userId: userId,
+        variables: {
+          $elemMatch: {
+            variableName: normalizedVariableName,
+            variableId: { $ne: variableId },
+          },
+        },
+      },
+      { "variables.$": 1 }
+    ).collation({ locale: "en", strength: 2 });
+
+    if (duplicateVariable) {
+      logger.error("Variable already exists");
+      throw new ApiError(httpStatus.NOT_FOUND, "Variable already exists");
+    }
+
     const updateVariable = await Variable.findOneAndUpdate(
       {
         $and: [{ "variables.variableId": variableId }, { userId: userId }],
