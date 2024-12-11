@@ -28,6 +28,7 @@ const deleteTableRoute = require("./tableRoutes/deleteTableRoute/deleteTable.rou
 
 //--------------------------------------- Table Column ----------------------------------
 const addColumnRoute = require("./tableRoutes/addColumnRoute/addColumn.route");
+const updateColumnRoute = require("./tableRoutes/updateColumnRoute/updateColumn.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -57,5 +58,6 @@ app.use("/table", deleteTableRoute);
 
 //---------------------------------- Table Column --------------------------
 app.use("/table/column", addColumnRoute);
+app.use("/table/column", updateColumnRoute);
 
 module.exports = app;
