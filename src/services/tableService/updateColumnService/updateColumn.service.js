@@ -3,6 +3,7 @@ const ApiError = require("../../../utils/ApiError");
 const User = require("../../../models/userModel/user.model");
 const Table = require("../../../models/tableModel/table.model");
 const logger = require("../../../config/logger");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const updateColumn = async (columnBody, userId, tableId, columnId) => {
   try {
@@ -13,6 +14,30 @@ const updateColumn = async (columnBody, userId, tableId, columnId) => {
       throw new ApiError(
         httpStatus.UNAUTHORIZED,
         "You do not have permission to perform this action"
+      );
+    }
+
+    const normalizedColumnName = normalizeString(columnBody.name);
+
+    const duplicateColumn = await Table.findOne(
+      {
+        userId: userId,
+        tableId: tableId,
+        columns: {
+          $elemMatch: {
+            name: normalizedColumnName,
+            columnId: { $ne: columnId },
+          },
+        },
+      },
+      { "columns.$": 1 }
+    ).collation({ locale: "en", strength: 2 });
+
+    if (duplicateColumn) {
+      logger.error("column already exists for this table");
+      throw new ApiError(
+        httpStatus.NOT_FOUND,
+        "column already exists for this table"
       );
     }
 
