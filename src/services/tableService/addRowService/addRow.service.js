@@ -4,6 +4,7 @@ const User = require("../../../models/userModel/user.model");
 const Table = require("../../../models/tableModel/table.model");
 const logger = require("../../../config/logger");
 const { v4: uuid } = require("uuid");
+const normalizeString = require("../../../middlewares/normalizeString");
 
 const addRow = async (rowBody, userId, tableId) => {
   try {
@@ -14,6 +15,27 @@ const addRow = async (rowBody, userId, tableId) => {
       throw new ApiError(
         httpStatus.UNAUTHORIZED,
         "You do not have permission to perform this action"
+      );
+    }
+
+    const normalizedRowName = normalizeString(rowBody.rowName);
+
+    const duplicateRow = await Table.findOne(
+      {
+        userId: userId,
+        tableId: tableId,
+        rows: {
+          $elemMatch: { name: normalizedRowName },
+        },
+      },
+      { "rows.$": 1 }
+    ).collation({ locale: "en", strength: 2 });
+
+    if (duplicateRow) {
+      logger.error("row already exists for this table");
+      throw new ApiError(
+        httpStatus.NOT_FOUND,
+        "row already exists for this table"
       );
     }
 
