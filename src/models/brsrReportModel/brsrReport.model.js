@@ -12,417 +12,53 @@ const brsrReportSchema = new mongoose.Schema(
     userId: {
       type: String,
     },
-    GeneralDisclosures: {
-      detailsOfTheListedEntity: {
-        corporateIdentityNumber: {
-          type: String,
-        },
-        nameOfTheListedEntity: {
-          type: String,
-        },
-        yearOfIncorporation: {
-          type: String,
-        },
-        registeredOfficeAddress: {
-          type: String,
-        },
-        email: {
-          type: String,
-        },
-        telephone: {
-          type: String,
-        },
-        website: {
-          type: String,
-        },
-        financialYear: {
-          type: String,
-        },
-        nameOfTheStockExchange: {
-          type: String,
-        },
-        paidUpCapital: {
-          type: String,
-        },
-        nameAndContact: {
-          type: String,
-        },
-        reportingBoundary: {
-          type: String,
-        },
-        nameOfAssuranceProvider: {
-          type: String,
-        },
-        typeOfAssuranceObtained: {
-          type: String,
-        },
-      },
-      productsServices: {
-        businessActivities: [
-          {
-            SNo: {
-              type: String,
-            },
-            descriptionOfMainActivity: {
-              type: String,
-            },
-            descriptionOfBusinessActivity: {
-              type: String,
-            },
-            percentageOfTurnover: {
-              type: Number,
-            },
-          },
-        ],
-        productsAndServices: [
-          {
-            SNo: {
-              type: Number,
-            },
-            productOrService: {
-              type: String,
-            },
-            nicCode: {
-              type: String,
-            },
-            percentageOfTotalTurnover: {
-              type: Number,
-            },
-          },
-        ],
-      },
-      operations: {
-        plantsLocations: [
-          {
-            location: {
-              type: String,
-            },
-            numberOfPlants: {
-              type: String,
-            },
-            numberOfOffices: {
-              type: String,
-            },
-            total: {
-              type: String,
-            },
-          },
-        ],
-        marketsServedByTheEntity: {
-          numberOfLocations: [
-            {
-              locations: {
-                type: String,
-              },
-              number: {
-                type: String,
-              },
-            },
-          ],
-          contributionExportsPercentageTurnoverEntity: {
-            type: String,
-          },
-          aBriefOnTypesOfCustomers: {
-            type: String,
-          },
-        },
-      },
-      employees: {
-        detailsAsAtTheEndOfFinancialYear: {
-          employeesAndWorker: {
-            employees: [
-              {
-                Sno: {
-                  type: String,
-                },
-                particulars: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-                male: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-                female: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-              },
-            ],
-            workers: [
-              {
-                type: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-                male: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-                female: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-              },
-            ],
-          },
-          differentlyAbledEmployeesAndWorkers: {
-            differentlyAbledEmployees: [
-              {
-                Sno: {
-                  type: String,
-                },
-                particulars: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-                male: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-                female: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-              },
-            ],
-            differentlyAbledWorkers: [
-              {
-                type: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-                male: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-                female: {
-                  number: {
-                    type: String,
-                  },
-                  percentage: {
-                    type: String,
-                  },
-                },
-              },
-            ],
-          },
-          representationOfWomen: {
-            boardOfDirectors: {
-              total: {
-                type: String,
-              },
-              noAndPercentageOfFemales: {
-                number: {
-                  type: String,
-                },
-                percentage: {
-                  type: String,
-                },
-              },
-            },
-          },
-          turnoverRateForPermanentEmployeesAndWorkers: {
-            permanentEmployees: {
-              turnoverRateInCurrentFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-              turnoverRateInPreviousFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-              turnoverRateInTheYearPriorToThePreviousFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-            },
-            permanentWorkers: {
-              turnoverRateInCurrentFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-              turnoverRateInPreviousFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-              turnoverRateInTheYearPriorToThePreviousFY: {
-                male: {
-                  type: String,
-                },
-                female: {
-                  type: String,
-                },
-                total: {
-                  type: String,
-                },
-              },
-            },
-          },
-        },
-      },
-      holdingSubsidiaryAndAssociateCompanies: {
-        namesOfHolding: [
-          {
-            Sno: {
-              type: String,
-            },
-            nameOfTheHolding: {
-              type: String,
-            },
-            indicateWhetherHolding: {
-              type: String,
-            },
-            percentageOfSharesHeldByListedEntity: {
-              type: String,
-            },
-            businessResponsibilityInitiativesOfTheListedEntity: {
-              type: String,
-            },
-          },
-        ],
-      },
-      csrDetails: {
-        whetherCSR: {
-          type: String,
-        },
-        Turnover: {
-          type: String,
-        },
-        netWorth: {
-          type: String,
-        },
-      },
-      transparencyAndDisclosuresCompliances: {
-        nationalGuidelinesOnResponsibleBusinessConduct: [
-          {
-            stakeholderGroupFromWhomComplaintIsReceived: {
-              type: String,
-            },
-            grievanceRedressalMechanismInPlace: {
-              type: String,
-            },
-            currentFinancialYear: {
-              numberOfComplaintsFiledDuringTheYear: {
-                type: String,
-              },
-              numberOfComplaintsPendingResolutionAtCloseOfTheYear: {
-                type: String,
-              },
-              remarks: {
-                type: String,
-              },
-            },
-            previousFinancialYear: {
-              numberOfComplaintsFiledDuringTheYear: {
-                type: String,
-              },
-              numberOfComplaintsPendingResolutionAtCloseOfTheYear: {
-                type: String,
-              },
-              remarks: {
-                type: String,
-              },
-            },
-          },
-        ],
-        overviewOfTheEntityMaterialResponsibleBusinessConductIssues: [
-          {
-            SNo: {
-              type: String,
-            },
-            materialIssueIdentified: {
-              type: String,
-            },
-            indicateWhetherRiskOrOpportunity: {
-              type: String,
-            },
-            rationaleForIdentifyingTheRiskOpportunity: {
-              type: String,
-            },
-            inCaseOfRiskApproachToAdaptOrMitigate: {
-              type: String,
-            },
-            financialImplicationsOfTheRiskOrOpportunity: {
-              type: String,
-            },
-          },
-        ],
-      },
+    year: {
+      type: String,
     },
-    managementAndProcessDisclosure: {},
+    corporateIdentityNumber: {
+      type: String,
+    },
+    nameOfTheCompany: {
+      type: String,
+    },
+    dateOfIncorporation: {
+      type: String,
+    },
+    addressOfRegisteredOfficeOfCompany: {
+      type: String,
+    },
+    emailOfTheCompany: {
+      type: String,
+    },
+    telephoneOfCompany: {
+      type: String,
+    },
+    websiteOfCompany: {
+      type: String,
+    },
+    dateOfFinancialYear: {
+      type: String,
+    },
+    nameOfStockExchangeWhereTheCompanyIsListed: {
+      type: String,
+    },
+    valueOfSharesPaidUp: {
+      type: String,
+    },
+    nameAndContact: {
+      type: String,
+    },
+    reportingBoundary: {
+      type: String,
+    },
+    nameOfAssuranceProvider: {
+      type: String,
+    },
+    typeOfAssuranceObtained: {
+      type: String,
+    },
   },
+
   {
     timestamps: true,
   }
