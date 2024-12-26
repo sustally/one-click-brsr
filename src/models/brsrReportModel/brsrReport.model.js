@@ -13,7 +13,8 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     year: {
-      type: String,
+      type: Date,
+      default: new Date(),
     },
     CorporateIdentityNumber: {
       type: String,
