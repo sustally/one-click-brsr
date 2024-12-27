@@ -25,9 +25,17 @@ const updateBrsrReport = async (brsrReportBody, userId, brsrReportId) => {
       throw new ApiError(httpStatus.NOT_FOUND, "BRSR report not found");
     }
 
+    // Loop through the fields to be updated
     Object.keys(brsrReportBody).forEach((key) => {
       if (brsrReportBody[key] !== undefined) {
-        brsrReport[key] = brsrReportBody[key];
+        // If it's an array, update it accordingly
+        if (Array.isArray(brsrReportBody[key])) {
+          // Handle array fields
+          brsrReport[key] = brsrReportBody[key];
+        } else {
+          // For other fields, just update the field
+          brsrReport[key] = brsrReportBody[key];
+        }
       }
     });
 
