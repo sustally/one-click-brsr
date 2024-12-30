@@ -40,6 +40,7 @@ const deleteRowRoute = require("./tableRoutes/deleteRowRoute/deleteRow.route");
 const createBrsrReportRoute = require("./brsrReportRoutes/createBrsrReportRoute/createBrsrReport.route");
 const updateBrsrReportRoute = require("./brsrReportRoutes/updateBrsrReportRoute/updateBrsrReport.route");
 const getBrsrReportByUserIdRoute = require("./brsrReportRoutes/getBrsrReportByUserIdRoute/getBrsrReportByUserId.route");
+const getBrsrReportByBrsrReportIdRoute = require("./brsrReportRoutes/getBrsrReportByBrsrReportIdRoute/getBrsrReportByBrsrReportId.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -81,5 +82,6 @@ app.use("/table/row", deleteRowRoute);
 app.use("/brsr/report", createBrsrReportRoute);
 app.use("/brsr/report", updateBrsrReportRoute);
 app.use("/brsr/report", getBrsrReportByUserIdRoute);
+app.use("/brsr/report", getBrsrReportByBrsrReportIdRoute);
 
 module.exports = app;
