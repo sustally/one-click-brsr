@@ -16,7 +16,7 @@ const getBrsrReportByBrsrReportId = async (userId, brsrReportId) => {
       );
     }
 
-    const brsrReports = await BRSRReport.find({
+    const brsrReports = await BRSRReport.findOne({
       userId: userId,
       brsrReportId: brsrReportId,
     }).lean();
