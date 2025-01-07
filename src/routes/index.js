@@ -45,6 +45,7 @@ const createXmlFileRoute = require("./brsrReportRoutes/createXmlFileRoute/create
 
 //------------------------------------ Source Data ------------------------------------------
 const saveSourceDataRoute = require("./sourceDataRoute/saveSourceDataRoute/saveSourceData.route");
+const getSourceDataByUserIdRoute = require("./sourceDataRoute/getSourceDataByUserIdRoute/getSourceDataByUserId.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -91,5 +92,6 @@ app.use("/brsr/report", createXmlFileRoute);
 
 //------------------------------------ Source Data ------------------------------------------
 app.use("/source/data", saveSourceDataRoute);
+app.use("/source/data", getSourceDataByUserIdRoute);
 
 module.exports = app;

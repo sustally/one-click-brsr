@@ -43,7 +43,7 @@ const saveSourceData = async (userId, sourceDataBody) => {
       `saveSourceData => save source data service has error ::> ${error.message}`
     );
     console.error(
-      "saveSourceData => save source data has error ::> ",
+      "saveSourceData => save source data service has error ::> ",
       error.message
     );
     throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, error.message);
