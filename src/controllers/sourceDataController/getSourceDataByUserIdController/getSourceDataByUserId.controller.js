@@ -10,7 +10,7 @@ const logger = require("../../../config/logger");
 const getSourceDataByUserId = catchAsync(async (req, res) => {
   try {
     logger.info("get source data by user id API called");
-    const brsrReport = await getSourceDataByUserIdService.getSourceDataByUserId(
+    const sourceData = await getSourceDataByUserIdService.getSourceDataByUserId(
       req.id
     );
     logger.info("source data get by user id successfully");
@@ -20,7 +20,7 @@ const getSourceDataByUserId = catchAsync(async (req, res) => {
         successResponseGenerator(
           httpStatus.CREATED,
           "source data get by user id successfully",
-          brsrReport
+          sourceData
         )
       );
   } catch (error) {
