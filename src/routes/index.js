@@ -41,6 +41,7 @@ const createBrsrReportRoute = require("./brsrReportRoutes/createBrsrReportRoute/
 const updateBrsrReportRoute = require("./brsrReportRoutes/updateBrsrReportRoute/updateBrsrReport.route");
 const getBrsrReportByUserIdRoute = require("./brsrReportRoutes/getBrsrReportByUserIdRoute/getBrsrReportByUserId.route");
 const getBrsrReportByBrsrReportIdRoute = require("./brsrReportRoutes/getBrsrReportByBrsrReportIdRoute/getBrsrReportByBrsrReportId.route");
+const createXmlFileRoute = require("./brsrReportRoutes/createXmlFileRoute/createXmlFile.route");
 
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
@@ -83,5 +84,6 @@ app.use("/brsr/report", createBrsrReportRoute);
 app.use("/brsr/report", updateBrsrReportRoute);
 app.use("/brsr/report", getBrsrReportByUserIdRoute);
 app.use("/brsr/report", getBrsrReportByBrsrReportIdRoute);
+app.use("/brsr/report", createXmlFileRoute);
 
 module.exports = app;
