@@ -26,6 +26,12 @@ const variableSchema = new mongoose.Schema(
         value: {
           type: String,
         },
+        sourceOfVariable: {
+          type: String,
+        },
+        variableNameInSource: {
+          type: String,
+        },
       },
     ],
   },
