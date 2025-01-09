@@ -1806,6 +1806,1028 @@ const brsrReportSchema = new mongoose.Schema(
         type: String,
       },
     ],
+    ChannelsOfCommunication: [
+      {
+        type: String,
+      },
+    ],
+    DetailsOfOtherChannelsOfCommunication: [
+      {
+        type: String,
+      },
+    ],
+    FrequencyOfEngagement: [
+      {
+        type: String,
+      },
+    ],
+    DetailsOfOtherFrequencyOfEngagement: [
+      {
+        type: String,
+      },
+    ],
+    PurposeAndScopeOfEngagementIncludingKeyTopicsAndConcernsRaisedDuringSuchEngagement:
+      [
+        {
+          type: String,
+        },
+      ],
+    TotalNumberOfEmployeesOrWorkersForTrainingOnHumanRightsIssues: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfEmployeesOrWorkersCoveredForProvidedTrainingOnHumanRightsIssues: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfEmployeesOrWorkersCoveredForProvidedTrainingOnHumanRightsIssues:
+      [
+        {
+          type: Number,
+        },
+      ],
+    NumberOfEmployeesOrWorkersRelatedToMinimumWages: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfEmployeesOrWorkersRelatedToMinimumWages: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfBoardOfDirectorsForRemunerationOrSalaryOrWages: [
+      {
+        type: Number,
+      },
+    ],
+    MedianOfRemunerationOrSalaryOrWagesOfBoardOfDirectors: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfKeyManagerialPersonnelForRemunerationOrSalaryOrWages: [
+      {
+        type: Number,
+      },
+    ],
+    MedianOfRemunerationOrSalaryOrWagesOfKeyManagerialPersonnel: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfEmployeesOtherThanBodAndKMPForRemunerationOrSalaryOrWages: [
+      {
+        type: Number,
+      },
+    ],
+    MedianOfRemunerationOrSalaryOrWagesOfEmployeesOtherThanBodAndKMP: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfWorkersForRemunerationOrSalaryOrWages: [
+      {
+        type: Number,
+      },
+    ],
+    MedianOfRemunerationOrSalaryOrWagesOfWorkers: [
+      {
+        type: Number,
+      },
+    ],
+    GrossWagesPaidToFemale: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWagesPaid: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfGrossWagesPaidToFemaleToTotalWagesPaid: [
+      {
+        type: Number,
+      },
+    ],
+    DoYouHaveAFocalPointResponsibleForAddressingHumanRightsImpactsOrIssuesCausedOrContributedToByTheBusiness:
+      {
+        type: String,
+      },
+    DescribeTheInternalMechanismsInPlaceToRedressGrievancesRelatedToHumanRightsIssuesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    RemarksforComplaintsExplanatoryTextBlock: [
+      {
+        type: String,
+      },
+    ],
+    TotalComplaintsReportedUnderSexualHarassmentOfWomenAtWorkplace: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfFemaleEmployeesOrWorkers: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfComplaintsInRespectOfNumberOfEmployeesOrWorker: [
+      {
+        type: Number,
+      },
+    ],
+    ComplaintsOnPOSHUpHeld: [
+      {
+        type: Number,
+      },
+    ],
+    MechanismsToPreventAdverseConsequencesToTheComplainantInDiscriminationAndHarassmentCasesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DoHumanRightsRequirementsFormPartOfYourBusinessAgreementsAndContracts: {
+      type: String,
+    },
+    PercentageOfChildLabourOfYourPlantsAndOfficesThatWereAssessedP5: {
+      type: String,
+    },
+    PercentageOfForcedLabourOrInvoluntaryLabourOfYourPlantsAndOfficesThatWereAssessedP5:
+      {
+        type: String,
+      },
+    PercentageOfSexualHarassmentOfYourPlantsAndOfficesThatWereAssessedP5: {
+      type: String,
+    },
+    PercentageOfDiscriminationAtWorkPlaceOfYourPlantsAndOfficesThatWereAssessedP5:
+      {
+        type: String,
+      },
+    PercentageOfWagesOfYourPlantsAndOfficesThatWereAssessedP5: {
+      type: String,
+    },
+    DetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfPlantAndOfficeExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DetailsOfABusinessProcessBeingModifiedOrIntroducedAsAResultOfAddressingHumanRightsGrievancesOrComplaintsExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DetailsOfTheScopeAndCoverageOfAnyHumanRightsDueDiligenceConductedExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    IsThePremiseOrOfficeOfTheEntityAccessibleToDifferentlyAbledVisitorsAsPerTheRequirementsOfTheRightsOfPersonsWithDisabilitiesAct2016:
+      {
+        type: String,
+      },
+    PercentageOfSexualHarassmentOfValueChainPartnersP5: {
+      type: String,
+    },
+    PercentageOfDiscriminationAtWorkPlaceOfValueChainPartnersP5: {
+      type: String,
+    },
+    PercentageOfChildLabourOfValueChainPartnersP5: {
+      type: String,
+    },
+    PercentageOfForcedLabourOrInvoluntaryLabourOfValueChainPartnersP5: {
+      type: String,
+    },
+    PercentageOfWagesOfValueChainPartnersP5: {
+      type: String,
+    },
+    DetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfValueChainPartnerExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    NotesPrinciple5ExplanatoryTextBlock: {
+      type: String,
+    },
+    WhetherDetailsOfTotalEnergyConsumptionAndEnergyIntensityApplicableToTheCompany:
+      {
+        type: Boolean,
+      },
+    RevenueFromOperations: [
+      {
+        type: Number,
+      },
+    ],
+    TotalElectricityConsumptionFromRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalFuelConsumptionFromRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    EnergyConsumptionThroughOtherSourcesFromRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalEnergyConsumedFromRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalElectricityConsumptionFromNonRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalFuelConsumptionFromNonRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    EnergyConsumptionThroughOtherSourcesFromNonRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalEnergyConsumedFromNonRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    TotalEnergyConsumedFromRenewableAndNonRenewableSources: [
+      {
+        type: Number,
+      },
+    ],
+    EnergyIntensityPerRupeeOfTurnover: [
+      {
+        type: Number,
+      },
+    ],
+    EnergyIntensityPerRupeeOfTurnoverAdjustingForPurchasingPowerParity: [
+      {
+        type: Number,
+      },
+    ],
+    EnergyIntensityInTermOfPhysicalOutput: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForEnergyConsumptionUnderLeadershipIndicators:
+      {
+        type: Boolean,
+      },
+    NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceForEnergyConsumptionExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DoesTheEntityHaveAnySitesOrFacilitiesIdentifiedAsDesignatedConsumersUnderThePerformanceAchieveAndTradeSchemeOfTheGovernmentOfIndia:
+      {
+        type: String,
+      },
+    NotesPrinciple6ExplanatoryTextBlock: {
+      type: String,
+    },
+    WaterWithdrawalBySurfaceWater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByGroundwater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByThirdPartyWater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalBySeawaterOrDesalinatedWater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByOthers: [
+      {
+        type: Number,
+      },
+    ],
+    TotalVolumeOfWaterWithdrawal: [
+      {
+        type: Number,
+      },
+    ],
+    TotalVolumeOfWaterConsumption: [
+      {
+        type: Number,
+      },
+    ],
+    WaterIntensityPerRupeeOfTurnover: [
+      {
+        type: Number,
+      },
+    ],
+    WaterIntensityPerRupeeOfTurnoverAdjustingForPurchasingPowerParity: [
+      {
+        type: Number,
+      },
+    ],
+    WaterIntensityInTermOfPhysicalOutput: [
+      {
+        type: Number,
+      },
+    ],
+    AnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWaterWithdrawal:
+      {
+        type: String,
+      },
+    NameOfTheExternalAgencyInCaseAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWaterWithdrawalExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    WaterDischargeToSurfaceWater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSurfaceWaterWithOutTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSurfaceWaterWithTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwaterWithOutTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwaterWithTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawater: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawaterWithOutTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawaterWithTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdParties: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdPartiesWithoutTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdPartiesWithTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthers: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthersWithoutTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthersWithTreatment: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWaterDischargedInKilolitres: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWaterDischarged:
+      {
+        type: String,
+      },
+    NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceForWaterDischargedExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    HasTheEntityImplementedAMechanismForZeroLiquidDischarge: {
+      type: String,
+    },
+    DetailsOfCoverageAndImplementationIfForZeroLiquidDischargeExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    WhetherDetailsOfAirEmissionsOtherThanGhgEmissionsByTheEntityIsApplicableToTheCompany:
+      {
+        type: String,
+      },
+    NOx: [
+      {
+        type: Number,
+      },
+    ],
+    SOx: [
+      {
+        type: Number,
+      },
+    ],
+    ParticulateMatter: [
+      {
+        type: Number,
+      },
+    ],
+    PersistentOrganicPollutants: [
+      {
+        type: Number,
+      },
+    ],
+    VolatileOrganicCompounds: [
+      {
+        type: Number,
+      },
+    ],
+    HazardousAirPollutants: [
+      {
+        type: Number,
+      },
+    ],
+    IndicateIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForAirEmissionsOtherThanGHGEmissions:
+      {
+        type: String,
+      },
+    NameOfTheExternalAgencyIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForAirEmissionsOtherThanGHGEmissionsExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    WhetherDetailsOfGreenHouseGasEmissionsAndItsIntensityIsApplicableToTheCompany:
+      {
+        type: String,
+      },
+    TotalScope1Emissions: [
+      {
+        type: Number,
+      },
+    ],
+    TotalScope2Emissions: [
+      {
+        type: Number,
+      },
+    ],
+    TotalScope1AndScope2EmissionsIntensityPerRupeeOfTurnover: [
+      {
+        type: Number,
+      },
+    ],
+    TotalScope1AndScope2EmissionsIntensityPerRupeeOfTurnoverAdjustedForPurchasingPowerParity:
+      [
+        {
+          type: Number,
+        },
+      ],
+    TotalScope1AndScope2EmissionsIntensityInTermOfPhysicalOutput: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherAnyIndicateIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForGreenHouseGasEmissions:
+      {
+        type: String,
+      },
+    NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceForGreenHouseGasEmissionsExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DoesTheEntityHaveAnyProjectRelatedToReducingGreenHouseGasEmission: {
+      type: String,
+    },
+    DetailsOfProjectRelatedToReducingGreenHouseGasEmissionExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    PlasticWaste: [
+      {
+        type: Number,
+      },
+    ],
+    EWaste: [
+      {
+        type: Number,
+      },
+    ],
+    BioMedicalWaste: [
+      {
+        type: Number,
+      },
+    ],
+    ConstructionAndDemolitionWaste: [
+      {
+        type: Number,
+      },
+    ],
+    BatteryWaste: [
+      {
+        type: Number,
+      },
+    ],
+    RadioactiveWaste: [
+      {
+        type: Number,
+      },
+    ],
+    OtherHazardousWaste: [
+      {
+        type: Number,
+      },
+    ],
+    OtherNonHazardousWasteGenerated: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWasteGenerated: [
+      {
+        type: Number,
+      },
+    ],
+    WasteIntensityPerRupeeOfTurnover: [
+      {
+        type: Number,
+      },
+    ],
+    WasteIntensityPerRupeeOfTurnoverAdjustingForPurchasingPowerParity: [
+      {
+        type: Number,
+      },
+    ],
+    WasteIntensityInTermOfPhysicalOutput: [
+      {
+        type: Number,
+      },
+    ],
+    WasteRecoveredThroughRecycled: [
+      {
+        type: Number,
+      },
+    ],
+    WasteRecoveredThroughReUsed: [
+      {
+        type: Number,
+      },
+    ],
+    WasteRecoveredThroughOtherRecoveryOperations: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWasteRecovered: [
+      {
+        type: Number,
+      },
+    ],
+    WasteDisposedByIncineration: [
+      {
+        type: Number,
+      },
+    ],
+    WasteDisposedByLandfilling: [
+      {
+        type: Number,
+      },
+    ],
+    WasteDisposedByOtherDisposalOperations: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWasteDisposed: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWasteManagement:
+      {
+        type: String,
+      },
+    NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceRelatedToWasteManagementExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DetailsOfWasteManagementPracticesAdoptedInYourEstablishmentsAndTheStrategyAdoptedByCompanyToReduceUsageOfHazardousAndToxicChemicalsExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    LocationOfOperationsOrOffices: [
+      {
+        type: Number,
+      },
+    ],
+    TypeOfOperations: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherTheConditionsOfEnvironmentalApprovalOrClearanceAreBeingCompliedWith:
+      [
+        {
+          type: Number,
+        },
+      ],
+    IsTheEntityCompliantWithTheApplicableEnvironmentalLaw: {
+      type: Boolean,
+    },
+    IndicateIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForAreasOfWaterStress:
+      {
+        type: Boolean,
+      },
+    WhetherTotalScope3EmissionsAndItsIntensityIsApplicableToTheCompany: {
+      type: Boolean,
+    },
+    TotalScope3Emissions: [
+      {
+        type: Number,
+      },
+    ],
+    TotalScope3EmissionsPerRupeeOfTurnover: [
+      {
+        type: Number,
+      },
+    ],
+    WhetherAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForTotalScope3Emissions:
+      {
+        type: Boolean,
+      },
+    DetailsOfSignificantDirectAndIndirectImpactOfTheEntityOnBiodiversityInSuchAreasAlongWithPreventionAndRemediationActivitiesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DoesTheEntityHaveABusinessContinuityAndDisasterManagementPlan: {
+      type: Boolean,
+    },
+    DisclosureWebLinkOfEntityAtWhichBusinessContinuityAndDisasterManagementPlanIsPlaced:
+      {
+        type: String,
+      },
+    DiscloseAnySignificantAdverseImpactToTheEnvironmentArisingFromTheValueChainOfTheEntityWhatMitigationOrAdaptationMeasuresHaveBeenTakenByTheEntityInThisRegardExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    PercentageOfValueChainPartnersByValueOfBusinessDoneWithSuchPartnersThatWereAssessedForEnvironmentalImpacts:
+      {
+        type: Number,
+      },
+    InitiativeUndertaken: [
+      {
+        type: Number,
+      },
+    ],
+    WebLinkForDetailsOfInitiativeTakenByEntity: [
+      {
+        type: Number,
+      },
+    ],
+    OutcomeOfTheInitiative: [
+      {
+        type: Number,
+      },
+    ],
+    CorrectiveActionTakenForInitiative: [
+      {
+        type: Number,
+      },
+    ],
+    NameOfTheArea: {
+      type: String,
+    },
+    NatureOfOperations: {
+      type: String,
+    },
+    WaterWithdrawalBySurfaceWaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByGroundwaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByThirdPartyWaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalBySeawaterOrDesalinatedWaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterWithdrawalByOthersPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    TotalVolumeOfWaterWithdrawalPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    TotalVolumeOfWaterConsumptionPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterIntensityPerRupeeOfTurnoverPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WasteIntensityTheRelevantMetricMayBeSelectedByTheEntityPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSurfaceWaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSurfaceWaterWithOutTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSurfaceWaterWithTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwaterWithOutTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToGroundwaterWithTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawaterPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawaterWithOutTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToSeawaterWithTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdPartiesPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdPartiesWithoutTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeBySentToThirdPartiesWithTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthersPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthersWithoutTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    WaterDischargeToOthersWithTreatmentPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWaterDischargedInKilolitresPerArea: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfAffiliationsWithTradeAndIndustryChambersOrAssociations: {
+      type: Number,
+    },
+    NotesPrinciple7ExplanatoryTextBlock: {
+      type: String,
+    },
+    NameOfTheTradeAndIndustryChambersOrAssociations: [
+      {
+        type: Number,
+      },
+    ],
+    ReachOfTradeAndIndustryChambersOrAssociations: [
+      {
+        type: Number,
+      },
+    ],
+    DescribeTheMechanismsToReceiveAndRedressGrievancesOfTheCommunityExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    PercentageOfDirectlySourcedFromMSMEsOrSmallProducers: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfSourcedDirectlyFromWithinTheDistrictAndNeighbouringDistricts: [
+      {
+        type: Number,
+      },
+    ],
+    DiscloseWagesPaidToPersonsEmployed: [
+      {
+        type: Number,
+      },
+    ],
+    TotalWageCost: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfJobCreation: [
+      {
+        type: Number,
+      },
+    ],
+    NotesPrinciple8ExplanatoryTextBlock: {
+      type: String,
+    },
+    CSRProject: [
+      {
+        type: Number,
+      },
+    ],
+    NumberOfPersonsBenefittedFromCSRProjects: [
+      {
+        type: Number,
+      },
+    ],
+    PercentageOfBeneficiariesFromVulnerableAndMarginalizedGroups: [
+      {
+        type: Number,
+      },
+    ],
+    StateOfCSRProjectsUndertaken: [
+      {
+        type: Number,
+      },
+    ],
+    AspirationalDistrictOfCSRProjectsUndertaken: [
+      {
+        type: Number,
+      },
+    ],
+    AmountSpentForCSRProjectsUndertaken: [
+      {
+        type: Number,
+      },
+    ],
+    DoYouHaveAPreferentialProcurementPolicyWhereYouGivePreferenceToPurchaseFromSuppliersComprisingMarginalizedOrVulnerableGroups:
+      {
+        type: String,
+      },
+    FromWhichMarginalizedOrVulnerableGroupsDoYouProcure: {
+      type: String,
+    },
+    WhatPercentageOfTotalProcurementByValueDoesItConstitute: {
+      type: Boolean,
+    },
+    DescribeTheMechanismsInPlaceToReceiveAndRespondToConsumerComplaintsAndFeedbackExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    EnvironmentalAndSocialParametersRelevantToTheProductAsAPercentageToTotalTurnover:
+      {
+        type: Boolean,
+      },
+    SafeAndResponsibleUsageAsAPercentageToTotalTurnover: {
+      type: Boolean,
+    },
+    RecyclingAndOrSafeDisposalAsAPercentageToTotalTurnover: {
+      type: Boolean,
+    },
+    ConsumerComplaintsReceivedDuringTheYear: [
+      {
+        type: Number,
+      },
+    ],
+    ConsumerComplaintsPendingResolutionAtEndOfYear: [
+      {
+        type: Number,
+      },
+    ],
+    RemarkForConsumerComplaints: [
+      {
+        type: String,
+      },
+    ],
+    NumberOfVoluntaryRecalls: {
+      type: Number,
+    },
+    NumberOfForcedRecalls: {
+      type: Number,
+    },
+    ReasonsForForcedRecall: {
+      type: String,
+    },
+    DoesTheEntityHaveAFrameworkOrPolicyOnCyberSecurityAndRisksRelatedToDataPrivacy:
+      {
+        type: Boolean,
+      },
+    WebLinkOfThePolicyOnCyberSecurityAndRisksRelatedToDataPrivacy: {
+      type: String,
+    },
+    DetailsOfAnyCorrectiveActionsTakenOrUnderwayOnIssuesRelatingToAdvertisingAndDeliveryOfEssentialServicesOrCyberSecurityAndDataPrivacyOrRecallsOrPenaltyOrActionTakenByRegulatoryAuthoritiesOnSafetyOfProductsOrServicesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    NumberOfInstancesOfDataBreachesAlongWithImpact: {
+      type: Boolean,
+    },
+    PercentageOfDataBreachesInvolvingPersonallyIdentifiableInformationOfCustomers:
+      {
+        type: Boolean,
+      },
+    DetailsOfImpactOfDataBreachesExplanatoryTextBlock: {
+      type: String,
+    },
+    WeblinkWhereInformationOnProductsAndServicesOfTheEntityCanBeAccessedExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    StepsTakenToInformAndEducateConsumersAboutSafeAndResponsibleUsageOfProductsAndOrServicesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    MechanismsInPlaceToInformConsumersOfAnyRiskOfDisruptionOrDiscontinuationOfEssentialServicesExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    DoesTheEntityDisplayProductInformationOnTheProductOverAndAboveWhatIsMandatedAsPerLocalLaws:
+      {
+        type: String,
+      },
+    DidYourEntityCarryOutAnySurveyWithRegardToConsumerSatisfactionRelatingToTheMajorProductsOrServicesOfTheEntitySignificantLocationsOfOperationOfTheEntityOrTheEntityAsAWhole:
+      {
+        type: Boolean,
+      },
+    TheEntityHasNotApplicableProductInformationOnTheProductOverAndAboveWhatIsMandatedAsPerLocalLawsExplanatoryTextBlock:
+      {
+        type: String,
+      },
+    NotesPrinciple9ExplanatoryTextBlock: {
+      type: String,
+    },
   },
 
   {
