@@ -2,6 +2,7 @@ const httpStatus = require("http-status");
 const ApiError = require("../../../utils/ApiError");
 const User = require("../../../models/userModel/user.model");
 const BRSRReport = require("../../../models/brsrReportModel/brsrReport.model");
+const Variable = require("../../../models/variableModel/variable.model");
 const logger = require("../../../config/logger");
 const fs = require("fs");
 const js2xmlparser = require("js2xmlparser");
@@ -34,6 +35,50 @@ const createXmlFile = async (userId, brsrReportId) => {
       throw new ApiError(httpStatus.NOT_FOUND, "BRSR report not found");
     }
 
+    const variableDoc = await Variable.findOne({ userId: userId });
+    if (!variableDoc) {
+      logger.error("Variables not found for the user");
+      throw new ApiError(
+        httpStatus.NOT_FOUND,
+        "Variables not found for the user"
+      );
+    }
+
+    // Map variables into key-value pairs for easy lookup
+    const userVariables = variableDoc.variables.reduce((acc, variable) => {
+      acc[variable.variableName] = variable.value;
+      return acc;
+    }, {});
+
+    // Function to replace variables in a string
+    const replaceVariablesInString = (data, variables) => {
+      return data.replace(/\${(.*?)}/g, (_, varName) => {
+        return variables[varName] || `\${${varName}}`; // Retain unresolved variables as-is
+      });
+    };
+
+    // Function to replace variables in the report
+    const replaceVariablesInObject = (data, variables) => {
+      if (typeof data === "string") {
+        return replaceVariablesInString(data, variables);
+      }
+      if (Array.isArray(data)) {
+        return data.map((item) => replaceVariablesInObject(item, variables));
+      }
+      if (data && typeof data === "object") {
+        for (const key in data) {
+          data[key] = replaceVariablesInObject(data[key], variables);
+        }
+      }
+      return data;
+    };
+
+    // Replace variables in the BRSR report
+    const updatedBRSRReport = replaceVariablesInObject(
+      brsrReport.toObject(),
+      userVariables
+    );
+
     // Prepare directory structure
     const publicDir = path.join(__dirname, "../../../public");
     const uploadsDir = path.join(publicDir, "uploads");
@@ -46,7 +91,7 @@ const createXmlFile = async (userId, brsrReportId) => {
     });
 
     // Prepare data for XML
-    const sanitizedData = brsrReport.toObject();
+    const sanitizedData = { ...updatedBRSRReport };
     delete sanitizedData._id; // Remove the problematic `_id` field
     delete sanitizedData.__v; // Remove any Mongoose version key
     delete sanitizedData.brsrReportId;
@@ -58,10 +103,10 @@ const createXmlFile = async (userId, brsrReportId) => {
     // Convert BRSR report to XML
     const xmlContent = js2xmlparser.parse("BRSRReport", sanitizedData);
     if (!xmlContent) {
-      logger.error("Something went wrong when creating Xml");
+      logger.error("Something went wrong when creating XML");
       throw new ApiError(
         httpStatus.NOT_FOUND,
-        "Something went wrong when creating Xml"
+        "Something went wrong when creating XML"
       );
     }
 
