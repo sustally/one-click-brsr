@@ -10,10 +10,7 @@ const logger = require("../../../config/logger");
 const createBrsrReport = catchAsync(async (req, res) => {
   try {
     logger.info("create BRSR report API called");
-    const brsrReport = await createBrsrReportService.createBrsrReport(
-      req.body,
-      req.id
-    );
+    const brsrReport = await createBrsrReportService.createBrsrReport(req.id);
     logger.info("BRSR report created successfully");
     res
       .status(httpStatus.CREATED)
