@@ -31,7 +31,7 @@ const brsrReportSchema = new mongoose.Schema(
     AddressOfCorporateOfficeOfCompany: {
       type: String,
     },
-    EmailOfTheCompany: {
+    EMailOfTheCompany: {
       type: String,
     },
     TelephoneOfCompany: {
@@ -59,7 +59,7 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     ValueOfSharesPaidUp: {
-      type: String,
+      type: Number,
     },
     NameOfContactPerson: {
       type: String,
@@ -67,14 +67,14 @@ const brsrReportSchema = new mongoose.Schema(
     ContactNumberOfContactPerson: {
       type: String,
     },
-    EmailOfContactPerson: {
+    EMailOfContactPerson: {
       type: String,
     },
     ReportingBoundary: {
       type: String,
     },
     WhetherTheCompanyHasUndertakenReasonableAssuranceOfTheBRSRCore: {
-      type: String,
+      type: Boolean,
     },
     NotesGeneralDisclosureExplanatoryTextBlock: {
       type: String,
@@ -95,165 +95,79 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     WhetherCorporateIdentityNumberIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherNameOfTheCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherYearOfIncorporationIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherAddressOfRegisteredOfficeOfCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherAddressOfCorporateOfficeOfCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherEMailOfTheCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherTelephoneOfCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherWebsiteOfCompanyIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfFinancialYearForWhichReportingIsBeingDoneIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheStockExchangeWhereTheCompanyIsListedIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherValueOfSharesPaidUpIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherNameAndContactDetailsOfTheContactPersonInCaseOfAnyQueriesOnTheBRSRReportIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherReportingBoundaryIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     TypeOfAssuranceForDetailsOfProductsOrServices: {
       type: String,
     },
     WhetherDetailsOfBusinessActivitiesAccountingForNinetyPercentOfTheTurnoverIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherProductsOrServicesSoldByTheEntityAccountingForNinetyPercentOfTheTurnoverIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForDetailsOfOperations: {
       type: String,
     },
     WhetherDetailsOfNumberOfLocationsWherePlantsAndOrOperationsOrOfficesOfTheEntityAreSituatedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherMarketsServedByTheEntityIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     TypeOfAssuranceForDetailsOfEmployees: {
       type: String,
     },
     WhetherDetailsOfEmployeesAsAtTheEndOfFinancialYearIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherParticipationOrInclusionOrRepresentationOfWomenIsAssuredByAssurer: {
-      type: String,
-    },
-    NameOfTheCompanyOrLLPOrFirmOfAssuranceProvider: {
-      type: String,
-    },
-    CompanyIDOrLLPIDOrFirmIDOfAssuranceProvider: {
-      type: String,
-    },
-    TypeOfAssuranceObtain: {
-      type: String,
-    },
-    TypeOfAssuranceForSectionAGeneralDisclosures: {
-      type: String,
-    },
-    TypeOfAssuranceForDetailsOfTheListedEntity: {
-      type: String,
-    },
-    WhetherCorporateIdentityNumberIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherNameOfTheCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherYearOfIncorporationIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherAddressOfRegisteredOfficeOfCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherAddressOfCorporateOfficeOfCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherEMailOfTheCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherTelephoneOfCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherWebsiteOfCompanyIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherDetailsOfFinancialYearForWhichReportingIsBeingDoneIsAssuredByAssurer:
-      {
-        type: String,
-      },
-    WhetherDetailsOfTheStockExchangeWhereTheCompanyIsListedIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherValueOfSharesPaidUpIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherNameAndContactDetailsOfTheContactPersonInCaseOfAnyQueriesOnTheBRSRReportIsAssuredByAssurer:
-      {
-        type: String,
-      },
-    WhetherReportingBoundaryIsAssuredByAssurer: {
-      type: String,
-    },
-    TypeOfAssuranceForDetailsOfProductsOrServices: {
-      type: String,
-    },
-    WhetherDetailsOfBusinessActivitiesAccountingForNinetyPercentOfTheTurnoverIsAssuredByAssurer:
-      {
-        type: String,
-      },
-    WhetherProductsOrServicesSoldByTheEntityAccountingForNinetyPercentOfTheTurnoverIsAssuredByAssurer:
-      {
-        type: String,
-      },
-    TypeOfAssuranceForDetailsOfOperations: {
-      type: String,
-    },
-    WhetherDetailsOfNumberOfLocationsWherePlantsAndOrOperationsOrOfficesOfTheEntityAreSituatedIsAssuredByAssurer:
-      {
-        type: String,
-      },
-    WhetherMarketsServedByTheEntityIsAssuredByAssurer: {
-      type: String,
-    },
-    TypeOfAssuranceForDetailsOfEmployees: {
-      type: String,
-    },
-    WhetherDetailsOfEmployeesAsAtTheEndOfFinancialYearIsAssuredByAssurer: {
-      type: String,
-    },
-    WhetherParticipationOrInclusionOrRepresentationOfWomenIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherTurnoverRateForPermanentEmployeesAndWorkersDiscloseTrendsForPastThreeYearsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForDetailsOfHoldingSubsidiaryAndAssociateCompaniesIncludingJointVentures:
       {
@@ -261,24 +175,24 @@ const brsrReportSchema = new mongoose.Schema(
       },
     WhetherNamesOfHoldingSubsidiaryAssociateCompaniesJointVenturesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForDetailsOfCSR: {
       type: String,
     },
     WhetherCSRIsApplicableAsPerSection135OfCompaniesAct2013IsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     TypeOfAssuranceForTransparencyAndDisclosuresCompliances: {
       type: String,
     },
     WhetherComplaintsOrGrievancesOnAnyOfThePrinciplesUnderTheNationalGuidelinesOnResponsibleBusinessConductIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherOverviewOfTheEntitysMaterialResponsibleBusinessConductIssuesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForSectionBManagementAndProcessDisclosures: {
       type: String,
@@ -288,55 +202,55 @@ const brsrReportSchema = new mongoose.Schema(
     },
     AssurerHasAssuredWhetherYourEntitysPolicyOrPoliciesCoverEachPrincipleAndItsCoreElementsOfTheNGRBCs:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHasTranslatedThePolicyIntoProcedures: {
-      type: String,
+      type: Boolean,
     },
     AssurerHasAssuredWhetherTheEnlistedPoliciesExtendToYourValueChainPartners: {
-      type: String,
+      type: Boolean,
     },
     WhetherNameOfTheNationalAndInternationalCodesOrCertificationsOrLabelsOrStandardsAdoptedByYourEntityAndMappedToEachPrincipleIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherSpecificCommitmentsGoalsAndTargetsSetByTheEntityWithDefinedTimelinesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherPerformanceOfTheEntityAgainstTheSpecificCommitmentsGoalsAndTargetsAlongWithReasonsInCaseTheSameAreNotMetIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForGovernanceLeadershipAndOversight: {
       type: String,
     },
     WhetherStatementByDirectorResponsibleForTheBusinessResponsibilityReportHighlightingESGRelatedChallengesTargetsAndAchievementsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheHighestAuthorityResponsibleForImplementationAndOversightOfTheBusinessResponsibilityPolicyIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHaveASpecifiedCommitteeOfTheBoardOrDirectorResponsibleForDecisionMakingOnSustainabilityRelatedIssues:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherPerformanceAgainstAbovePoliciesAndFollowUpActionIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherComplianceWithStatutoryRequirementsOfRelevanceToThePrinciplesAndRectificationOfAnyNonCompliancesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHasCarriedOutIndependentAssessmentEvaluationOfTheWorkingOfItsPoliciesByAnExternalAgency:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherReasonsIfPoliciesNotCoverEachPrincipleAndItsCoreElementsOfTheNGRBCsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForSectionCPrincipleWisePerformanceDisclosures: {
       type: String,
@@ -346,34 +260,34 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherPercentageCoverageByTrainingAndAwarenessProgramsOnAnyOfThePrinciplesDuringTheFinancialYearForBODOrKMPOrEmployeeOrWorkerIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfFinesOrPenaltiesOrPunishmentOrAwardOrCompoundingFeesOrSettlementIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheAppealOrRevisionPreferredInCasesWhereMonetaryOrNonMonetaryActionHasBeenAppealedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsAndWeblinkOfAnAntiCorruptionOrAntiBriberyPolicyIsPlaceIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherNumberOfDirectorsOrKMPsOrEmployeesOrWorkersAgainstWhomDisciplinaryActionWasTakenByAnyLawEnforcementAgencyForTheChargesOfBriberyOrCorruptionIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfComplaintsWithRegardToConflictOfInterestIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfAnyCorrectiveActionTakenOrUnderwayOnIssuesRelatedToFinesOrPenaltiesOrActionTakenByRegulatorsOrLawEnforcementAgenciesOrJudicialInstitutionsOnCasesOfCorruptionAndConflictsOfInterestIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherNumberOfDaysOfAccountsPayablesIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForNumberOfDaysOfAccountsPayables: {
       type: String,
@@ -383,7 +297,7 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherDetailsOfConcentrationOfPurchasesAndSalesWithTradingHousesDealersAndRelatedPartiesAlongWithLoansAndAdvancesAndInvestmentsWithRelatedPartiesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForDetailsOfConcentrationOfPurchasesAndSalesWithTradingHousesDealersAndRelatedPartiesAlongWithLoansAndAdvancesAndInvestmentsWithRelatedParties:
       {
@@ -398,60 +312,60 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherAwarenessProgrammesConductedForValueChainPartnersOnAnyOfThePrinciplesDuringTheFinancialYearIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTheEntityHaveProcessesInPlaceToAvoidOrManageConflictOfInterestsInvolvingMembersOfTheBoardIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple2EssentialIndicators: {
       type: String,
     },
     WhetherPercentageOfRAndDAndCapitalExpenditureInvestmentsInSpecificTechnologiesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTheEntityHaveProceduresInPlaceForSustainableSourcingAndPercentageOfInputsWereSourcedSustainablyIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDescribeTheProcessesInPlaceToSafelyReclaimYourProductsForReusingRecyclingAndDisposingAtTheEndOfLifeForPlasticsIncludingPackagingEWasteHazardousWasteAndOtherWasteIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheWasteCollectionPlanIsInLineWithTheExtendedProducerResponsibilityPlanSubmittedToPollutionControlBoardsAndStepsTakenToAddressTheWasteCollectionPlanIfNotSubmitted:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple2LeadershipIndicators: {
       type: String,
     },
     AssurerHasAssuredWhetherTheEntityConductedLifeCyclePerspectiveOrAssessmentsForAnyOfItsProductsOrForItsServices:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfSignificantSocialOrEnvironmentalConcernsFromProductionOrDisposalOfProductOrServiceWithActionTakenToMitigateTheSameIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfPercentageOfRecycledOrReusedInputMaterialToTotalMaterialByValueUsedInProductionOrProvidingServicesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTheProductsAndPackagingReclaimedAtEndOfLifeOfProductsAmountReusedOrRecycledOrSafelyDisposedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfReclaimedProductsAndTheirPackagingMaterialsForEachProductCategoryIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple3EssentialIndicators: {
       type: String,
     },
     WhetherDetailsOfMeasuresForTheWellBeingOfEmployeesAndWorkersAndSpendingOnItIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForDetailsOfMeasuresForTheWellBeingOfEmployeesAndWorkersAndSpendingOnIt:
       {
@@ -462,40 +376,40 @@ const brsrReportSchema = new mongoose.Schema(
         type: String,
       },
     WhetherDetailsOfRetirementBenefitsIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherThePremisesOrOfficesOfTheEntityAccessibleToDifferentlyAbledEmployeesAndWorkersAndStepsAreBeingTakenByTheEntityIfThePremisesOrOfficesOfTheEntityNotAccessibleIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHaveAnEqualOpportunityPolicyAsPerTheRightsOfPersonsWithDisabilitiesAct2016:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherReturnToWorkAndRetentionRatesOfPermanentEmployeesAndWorkersThatTookParentalLeaveIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherIsThereAMechanismAvailableToReceiveAndRedressGrievancesForTheFollowingCategoriesOfEmployeesAndWorker:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherMembershipOfEmployeesAndWorkerInAssociationsOrUnionsRecognisedByTheListedEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTrainingGivenToEmployeesAndWorkersIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfPerformanceAndCareerDevelopmentReviewsOfEmployeesAndWorkerIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherHealthAndSafetyManagementSystemIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfSafetyRelatedIncidentsIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForDetailsOfSafetyRelatedIncidents: {
       type: String,
@@ -505,85 +419,85 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherMeasuresTakenByTheEntityToEnsureASafeAndHealthyWorkPlaceIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfComplaintsMadeByEmployeesAndWorkersIsAssuredByAssurerAsPerP3:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherAssessmentsOfYourPlantsAndOfficesThatWereAssessedForTheYearP3IsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfAnyCorrectiveActionTakenOrUnderwayToAddressSafetyRelatedIncidentsOfYourPlantsAndOfficesThatWereAssessedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple3LeadershipIndicators: {
       type: String,
     },
     AssurerHasAssuredWhetherTheEntityExtendAnyLifeInsuranceOrAnyCompensatoryPackageInTheEventOfDeathOfEmployees:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfMeasuresUndertakenByTheEntityToEnsureThatStatutoryDuesHaveBeenDeductedAndDepositedByTheValueChainPartnersIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfNumberOfEmployeesOrWorkersHavingSufferedHighConsequenceWorkRelatedInjuryOrIllHealthOrFatalitiesWhoOrWhoseFamilyMembersAreRehabilitatedAndPlacedInSuitableEmploymentIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityProvideTransitionAssistanceProgramsToFacilitateContinuedEmployabilityAndTheManagementOfCareerEndingsResultingFromRetirementOrTerminationOfEmployment:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOnAssessmentOfValueChainPartnersP3IsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfAnyCorrectiveActionTakenOrUnderwayToAddressSafetyRelatedIncidentsOnAssessmentOfValueChainPartnersIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple4EssentialIndicators: {
       type: String,
     },
     WhetherTheProcessesForIdentifyingKeyStakeholderGroupsOfTheEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherListStakeholderGroupsIdentifiedAsKeyForYourEntityAndTheFrequencyOfEngagementWithEachStakeholderGroupIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple4LeadershipIndicators: {
       type: String,
     },
     WhetherTheProcessesForConsultationBetweenStakeholdersAndTheBoardOnEconomicEnvironmentalAndSocialTopicsOrIfConsultationIsDelegatedHowIsFeedbackFromSuchConsultationsProvidedToTheBoardIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherStakeholderConsultationIsUsedToSupportTheIdentificationAndManagementOfEnvironmentalAndSocialTopics:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfInstancesOfEngagementWithAndActionsTakenToAddressTheConcernsOfVulnerableOrMarginalizedStakeholderGroupsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple5EssentialIndicators: {
       type: String,
     },
     WhetherEmployeesAndWorkersWhoHaveBeenProvidedTrainingOnHumanRightsIssuesAndPoliciesOfTheEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfMinimumWagesPaidToEmployeesAndWorkersIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfMedianOfRemunerationOrSalaryOrWagesAndWagesPaidToFemaleIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForDetailsOfMedianOfRemunerationOrSalaryOrWagesAndWagesPaidToFemale:
       {
@@ -595,19 +509,19 @@ const brsrReportSchema = new mongoose.Schema(
       },
     AssurerHasAssuredWhetherDoYouHaveAFocalPointResponsibleForAddressingHumanRightsImpactsOrIssuesCausedOrContributedToByTheBusiness:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTheInternalMechanismsInPlaceToRedressGrievancesRelatedToHumanRightsIssuesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfComplaintsMadeByEmployeesAndWorkersIsAssuredByAssurerAsPerP5:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherComplaintsFiledUnderTheSexualHarassmentOfWomenAtWorkplaceIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForComplaintsFiledUnderTheSexualHarassmentOfWomenAtWorkplace:
       {
@@ -619,48 +533,48 @@ const brsrReportSchema = new mongoose.Schema(
       },
     WhetherMechanismsToPreventAdverseConsequencesToTheComplainantInDiscriminationAndHarassmentCasesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherHumanRightsRequirementsFormPartOfYourBusinessAgreementsAndContractsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherAssessmentsOfYourPlantsAndOfficesThatWereAssessedForTheYearP5IsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfPlantAndOfficeIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple5LeadershipIndicators: {
       type: String,
     },
     WhetherDetailsOfABusinessProcessBeingModifiedOrIntroducedAsAResultOfAddressingHumanRightsGrievancesOrComplaintsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheScopeAndCoverageOfAnyHumanRightsDueDiligenceConductedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherThePremiseOrOfficeOfTheEntityAccessibleToDifferentlyAbledVisitorsAsPerTheRequirementsOfTheRightsOfPersonsWithDisabilitiesAct2016:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOnAssessmentOfValueChainPartnersP5IsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfValueChainPartnerIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple6EssentialIndicators: {
       type: String,
     },
     WhetherDetailsOfTotalEnergyConsumptionInJoulesOrMultiplesAndEnergyIntensityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForDetailsOfTotalEnergyConsumptionInJoulesOrMultiplesAndEnergyIntensity:
       {
@@ -672,10 +586,10 @@ const brsrReportSchema = new mongoose.Schema(
       },
     AssurerHasAssuredWhetherTheEntityHaveAnySitesOrFacilitiesIdentifiedAsDesignatedConsumersUnderThePerformanceAchieveAndTradeSchemeOfTheGovernmentOfIndia:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheDisclosuresRelatedToWaterWithdrawalIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForDetailsOfTheDisclosuresRelatedToWaterWithdrawal: {
       type: String,
@@ -684,7 +598,7 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     WhetherDetailsOfTheDisclosuresRelatedToWaterDischargedIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForDetailsOfTheDisclosuresRelatedToWaterDischarged: {
       type: String,
@@ -694,14 +608,14 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherTheEntityImplementedAMechanismForZeroLiquidDischargeIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfAirEmissionsOtherThanGhgEmissionsByTheEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfGreenHouseGasEmissionsAndItsIntensityIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForDetailsOfGreenHouseGasEmissionsAndItsIntensity: {
       type: String,
@@ -711,10 +625,10 @@ const brsrReportSchema = new mongoose.Schema(
     },
     AssurerHasAssuredWhetherTheEntityHaveAnyProjectRelatedToReducingGreenHouseGasEmission:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsRelatedToWasteManagementByTheEntityIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     AssuranceSubTypeForDetailsRelatedToWasteManagementByTheEntity: {
       type: String,
@@ -724,86 +638,86 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherDetailsOfWasteManagementPracticesAdoptedInYourEstablishmentsAndTheStrategyAdoptedByCompanyToReduceUsageOfHazardousAndToxicChemicalsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfOperationsOrOfficesInOrAroundEcologicallySensitiveAreasWhereEnvironmentalApprovalsOrClearancesAreRequiredIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfEnvironmentalImpactAssessmentsOfProjectsUndertakenByTheEntityBasedOnApplicableLawsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityCompliantWithTheApplicableEnvironmentalLaw:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple6LeadershipIndicators: {
       type: String,
     },
     WhetherWaterWithdrawalOrConsumptionAndDischargeInAreasOfWaterStressInKilolitresIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTotalScope3EmissionsAndItsIntensityIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfSignificantDirectAndIndirectImpactOfTheEntityOnBiodiversityInSuchAreasAlongWithPreventionAndRemediationActivitiesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTheEntityHasUndertakenAnySpecificInitiativesOrUsedInnovativeTechnologyOrSolutionsToImproveResourceEfficiencyIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHaveABusinessContinuityAndDisasterManagementPlan:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDiscloseAnySignificantAdverseImpactToTheEnvironmentArisingFromTheValueChainOfTheEntityWhatMitigationOrAdaptationMeasuresHaveBeenTakenByTheEntityInThisRegardIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherPercentageOfValueChainPartnersByValueOfBusinessDoneWithSuchPartnersThatWereAssessedForEnvironmentalImpactsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple7EssentialIndicators: {
       type: String,
     },
     WhetherTheEntityIsAMemberOfOrAffiliatedToTradeAndIndustryChambersOrAssociationsDeterminedBasedOnTheTotalMembersOfSuchBodyIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfCorrectiveActionTakenOrUnderwayOnAnyIssuesRelatedToAntiCompetitiveConductByTheEntityBasedOnAdverseOrdersFromRegulatoryAuthoritiesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple7LeadershipIndicators: {
       type: String,
     },
     WhetherDetailsOfPublicPolicyPositionsAdvocatedByTheEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     TypeOfAssuranceForPrinciple8EssentialIndicators: {
       type: String,
     },
     WhetherDetailsOfSocialImpactAssessmentsOfProjectsUndertakenByTheEntityBasedOnApplicableLawsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfProjectsForWhichOngoingRehabilitationAndResettlementIsBeingUndertakenByEntityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDescribeTheMechanismsToReceiveAndRedressGrievancesOfTheCommunityIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherPercentageOfInputMaterialInputsToTotalInputsByValueSourcedFromSuppliersIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForPercentageOfInputMaterialInputsToTotalInputsByValueSourcedFromSuppliers:
       {
@@ -815,7 +729,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     WhetherJobCreationInSmallerTownsDiscloseWagesPaidToPersonsEmployedIncludingEmployeesOrWorkersEmployedOnAPermanentOrNonPermanentOrOnContractBasisIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForJobCreationInSmallerTownsDiscloseWagesPaidToPersonsEmployedIncludingEmployeesOrWorkersEmployedOnAPermanentOrNonPermanentOrOnContractBasis:
       {
@@ -830,56 +744,56 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherDetailsOfActionsTakenToMitigateAnyNegativeSocialImpactsIdentifiedInTheSocialImpactAssessmentsIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfCSRProjectsUndertakenInDesignatedAspirationalDistrictsAsIdentifiedByGovernmentBodiesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherAPreferentialProcurementPolicyWherePreferenceToPurchaseFromSuppliersComprisingMarginalizedOrVulnerableGroupsAndItsPercentageOfTotalProcurementByValueDoesItConstituteIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfTheBenefitsDerivedAndSharedFromTheIntellectualPropertiesOwnedOrAcquiredIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfCorrectiveActionsTakenOrUnderwayBasedOnAnyAdverseOrderInIntellectualPropertyRelatedDisputesWhereinUsageOfTraditionalKnowledgeIsInvolvedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfBeneficiariesOfCSRProjectsIsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     TypeOfAssuranceForPrinciple9EssentialIndicators: {
       type: String,
     },
     WhetherTheMechanismsInPlaceToReceiveAndRespondToConsumerComplaintsAndFeedbackIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherTurnoverOfProductsAndOrServicesAsAPercentageOfTurnoverFromAllProductsOrServiceThatCarryInformationAboutAsAPercentageToTotalTurnoverIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfNumberOfConsumerComplaintsP9IsAssuredByAssurer: {
-      type: String,
+      type: Boolean,
     },
     WhetherDetailsOfInstancesOfProductRecallsOnAccountOfSafetyIssuesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityHaveAFrameworkOrPolicyOnCyberSecurityAndRisksRelatedToDataPrivacy:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDetailsOfAnyCorrectiveActionsTakenOrUnderwayOnIssuesRelatingToAdvertisingAndDeliveryOfEssentialServicesOrCyberSecurityAndDataPrivacyOrRecallsOrPenaltyOrActionTakenByRegulatoryAuthoritiesOnSafetyOfProductsOrServicesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherDataBreachesInformationLikeNumberOfInstancesOfDataBreachesAlongWithImpactAndPercentageOfDataBreachesInvolvingPersonallyIdentifiableInformationOfCustomersIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssuranceSubTypeForDataBreachesInformationLikeNumberOfInstancesOfDataBreachesAlongWithImpactAndPercentageOfDataBreachesInvolvingPersonallyIdentifiableInformationOfCustomers:
       {
@@ -894,19 +808,19 @@ const brsrReportSchema = new mongoose.Schema(
     },
     WhetherWeblinkWhereInformationOnProductsAndServicesOfTheEntityCanBeAccessedIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherStepsTakenToInformAndEducateConsumersAboutSafeAndResponsibleUsageOfProductsAndOrServicesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     WhetherMechanismsInPlaceToInformConsumersOfAnyRiskOfDisruptionOrDiscontinuationOfEssentialServicesIsAssuredByAssurer:
       {
-        type: String,
+        type: Boolean,
       },
     AssurerHasAssuredWhetherTheEntityDisplayProductInformationOnTheProductOverAndAboveWhatIsMandatedAsPerLocalLaws:
       {
-        type: String,
+        type: Boolean,
       },
     NameOfStockExchangeWhereTheCompanyIsListed: [
       {
@@ -1004,7 +918,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     ],
     WhetherCSRIsApplicableAsPerSection135OfCompaniesAct2013: {
-      type: String,
+      type: Boolean,
     },
     Turnover: {
       type: Number,
@@ -1030,7 +944,7 @@ const brsrReportSchema = new mongoose.Schema(
     DoesCompanyParticipateInTheBusinessResponsibilityInitiativesOfTheListedEntity:
       [
         {
-          type: String,
+          type: Boolean,
         },
       ],
     GrievanceRedressalMechanismInPlace: [
@@ -1184,7 +1098,7 @@ const brsrReportSchema = new mongoose.Schema(
     HasTheEntityCarriedOutIndependentAssessmentEvaluationOfTheWorkingOfItsPoliciesByAnExternalAgency:
       [
         {
-          type: String,
+          type: Boolean,
         },
       ],
     NameOfTheAgencyIfTheEntityCarriedOutIndependentAssessmentEvaluationOfTheWorkingOfItsPoliciesByAnExternalAgencyExplanatoryTextBlock:
@@ -1254,7 +1168,7 @@ const brsrReportSchema = new mongoose.Schema(
       ],
     NumberOfComplaintsReceivedInRelationToIssuesOfConflictOfInterestOfTheKMPs: [
       {
-        type: String,
+        type: Number,
       },
     ],
     RemarksInCaseComplaintsReceivedInRelationToIssuesOfConflictOfInterestOfTheKmps:
@@ -1294,7 +1208,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     NumberOfTradingHousesWherePurchasesAreMade: [
       {
-        type: String,
+        type: Number,
       },
     ],
     AmountOfPurchasesFromTopTenTradingHouses: [
@@ -1406,7 +1320,7 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     TotalNumberOfAwarenessProgrammesHeld: {
-      type: String,
+      type: Number,
     },
     TopicsOrPrinciplesCoveredUnderTheTraining: {
       type: String,
@@ -1431,7 +1345,7 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     DoesTheEntityHaveProceduresInPlaceForSustainableSourcing: {
-      type: String,
+      type: Boolean,
     },
     PercentageOfInputsWereSourcedSustainably: {
       type: Number,
@@ -1453,11 +1367,11 @@ const brsrReportSchema = new mongoose.Schema(
         type: String,
       },
     WhetherExtendedProducerResponsibilityIsApplicableToTheEntitySActivities: {
-      type: String,
+      type: Boolean,
     },
     WhetherTheWasteCollectionPlanIsInLineWithTheExtendedProducerResponsibilityPlanSubmittedToPollutionControlBoards:
       {
-        type: String,
+        type: Boolean,
       },
     HasTheEntityConductedLifeCyclePerspectiveOrAssessmentsForAnyOfItsProductsOrForItsServices:
       {
@@ -1479,10 +1393,10 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     WhetherConductedByIndependentExternalAgency: {
-      type: String,
+      type: Boolean,
     },
     ResultsCommunicatedInPublicDomain: {
-      type: String,
+      type: Boolean,
     },
     IndicateInPutMaterial: [
       {
@@ -1532,7 +1446,7 @@ const brsrReportSchema = new mongoose.Schema(
     PercentageOfCostIncurredOnWellBeingMeasuresWithRespectToTotalRevenueOfTheCompany:
       [
         {
-          type: String,
+          type: Number,
         },
       ],
     NumberOfEmployeesCoveredAsPercentageOfTotalEmployees: [
@@ -1563,11 +1477,11 @@ const brsrReportSchema = new mongoose.Schema(
     },
     IsThereAMechanismAvailableToReceiveAndRedressGrievancesForTheFollowingCategoriesOfEmployeesAndWorker:
       {
-        type: String,
+        type: Boolean,
       },
     IsThereAMechanismAvailableToReceiveAndRedressGrievancesForPermanentWorkers:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForPermanentWorkersExplanatoryTextBlock:
       {
@@ -1575,7 +1489,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     IsThereAMechanismAvailableToReceiveAndRedressGrievancesForOtherThanPermanentWorkers:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForOtherThanPermanentWorkersExplanatoryTextBlock:
       {
@@ -1583,7 +1497,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     IsThereAMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployees:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployeesExplanatoryTextBlock:
       {
@@ -1591,7 +1505,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     IsThereAMechanismAvailableToReceiveAndRedressGrievancesForOtherThanPermanentEmployees:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForOtherThanPermanentEmployeesExplanatoryTextBlock:
       {
@@ -1727,11 +1641,11 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     DoesTheEntityExtendAnyLifeInsuranceOrAnyCompensatoryPackageInTheEventOfDeathOfEmployees:
       {
-        type: String,
+        type: Boolean,
       },
     DoesTheEntityExtendAnyLifeInsuranceOrAnyCompensatoryPackageInTheEventOfDeathOfWorkers:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfMeasuresUndertakenByTheEntityToEnsureThatStatutoryDuesHaveBeenDeductedAndDepositedByTheValueChainPartnersExplanatoryTextBlock:
       {
@@ -1783,7 +1697,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     WhetherStakeholderConsultationIsUsedToSupportTheIdentificationAndManagementOfEnvironmentalAndSocialTopics:
       {
-        type: String,
+        type: Boolean,
       },
     DetailsOfInstancesAsToHowTheInputsReceivedFromStakeholdersOnTheseTopicsWereIncorporatedIntoPoliciesAndActivitiesOfTheEntityExplanatoryTextBlock:
       {
@@ -1915,7 +1829,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     DoYouHaveAFocalPointResponsibleForAddressingHumanRightsImpactsOrIssuesCausedOrContributedToByTheBusiness:
       {
-        type: String,
+        type: Boolean,
       },
     DescribeTheInternalMechanismsInPlaceToRedressGrievancesRelatedToHumanRightsIssuesExplanatoryTextBlock:
       {
@@ -1954,21 +1868,21 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     PercentageOfChildLabourOfYourPlantsAndOfficesThatWereAssessedP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfForcedLabourOrInvoluntaryLabourOfYourPlantsAndOfficesThatWereAssessedP5:
       {
-        type: String,
+        type: Number,
       },
     PercentageOfSexualHarassmentOfYourPlantsAndOfficesThatWereAssessedP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfDiscriminationAtWorkPlaceOfYourPlantsAndOfficesThatWereAssessedP5:
       {
-        type: String,
+        type: Number,
       },
     PercentageOfWagesOfYourPlantsAndOfficesThatWereAssessedP5: {
-      type: String,
+      type: Number,
     },
     DetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfPlantAndOfficeExplanatoryTextBlock:
       {
@@ -1984,22 +1898,22 @@ const brsrReportSchema = new mongoose.Schema(
       },
     IsThePremiseOrOfficeOfTheEntityAccessibleToDifferentlyAbledVisitorsAsPerTheRequirementsOfTheRightsOfPersonsWithDisabilitiesAct2016:
       {
-        type: String,
+        type: Boolean,
       },
     PercentageOfSexualHarassmentOfValueChainPartnersP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfDiscriminationAtWorkPlaceOfValueChainPartnersP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfChildLabourOfValueChainPartnersP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfForcedLabourOrInvoluntaryLabourOfValueChainPartnersP5: {
-      type: String,
+      type: Number,
     },
     PercentageOfWagesOfValueChainPartnersP5: {
-      type: String,
+      type: Number,
     },
     DetailsOfAnyCorrectiveActionsTakenOrUnderwayToAddressSignificantRisksOrConcernsArisingFromTheAssessmentsOfValueChainPartnerExplanatoryTextBlock:
       {
@@ -2087,7 +2001,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     DoesTheEntityHaveAnySitesOrFacilitiesIdentifiedAsDesignatedConsumersUnderThePerformanceAchieveAndTradeSchemeOfTheGovernmentOfIndia:
       {
-        type: String,
+        type: Boolean,
       },
     NotesPrinciple6ExplanatoryTextBlock: {
       type: String,
@@ -2144,7 +2058,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     AnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWaterWithdrawal:
       {
-        type: String,
+        type: Boolean,
       },
     NameOfTheExternalAgencyInCaseAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWaterWithdrawalExplanatoryTextBlock:
       {
@@ -2281,7 +2195,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     IndicateIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForAirEmissionsOtherThanGHGEmissions:
       {
-        type: String,
+        type: Boolean,
       },
     NameOfTheExternalAgencyIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForAirEmissionsOtherThanGHGEmissionsExplanatoryTextBlock:
       {
@@ -2289,7 +2203,7 @@ const brsrReportSchema = new mongoose.Schema(
       },
     WhetherDetailsOfGreenHouseGasEmissionsAndItsIntensityIsApplicableToTheCompany:
       {
-        type: String,
+        type: Boolean,
       },
     TotalScope1Emissions: [
       {
@@ -2319,7 +2233,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     WhetherAnyIndicateIfAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForGreenHouseGasEmissions:
       {
-        type: String,
+        type: Boolean,
       },
     NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceForGreenHouseGasEmissionsExplanatoryTextBlock:
       {
@@ -2434,7 +2348,7 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     WhetherAnyIndependentAssessmentOrEvaluationOrAssuranceHasBeenCarriedOutByAnExternalAgencyForWasteManagement:
       {
-        type: String,
+        type: Boolean,
       },
     NameOfTheExternalAgencyThatUndertookIndependentAssessmentOrEvaluationOrAssuranceRelatedToWasteManagementExplanatoryTextBlock:
       {
@@ -2446,18 +2360,18 @@ const brsrReportSchema = new mongoose.Schema(
       },
     LocationOfOperationsOrOffices: [
       {
-        type: Number,
+        type: String,
       },
     ],
     TypeOfOperations: [
       {
-        type: Number,
+        type: String,
       },
     ],
     WhetherTheConditionsOfEnvironmentalApprovalOrClearanceAreBeingCompliedWith:
       [
         {
-          type: Number,
+          type: Boolean,
         },
       ],
     IsTheEntityCompliantWithTheApplicableEnvironmentalLaw: {
@@ -2505,22 +2419,22 @@ const brsrReportSchema = new mongoose.Schema(
       },
     InitiativeUndertaken: [
       {
-        type: Number,
+        type: String,
       },
     ],
     WebLinkForDetailsOfInitiativeTakenByEntity: [
       {
-        type: Number,
+        type: String,
       },
     ],
     OutcomeOfTheInitiative: [
       {
-        type: Number,
+        type: String,
       },
     ],
     CorrectiveActionTakenForInitiative: [
       {
-        type: Number,
+        type: String,
       },
     ],
     NameOfTheArea: {
@@ -2662,12 +2576,12 @@ const brsrReportSchema = new mongoose.Schema(
     },
     NameOfTheTradeAndIndustryChambersOrAssociations: [
       {
-        type: Number,
+        type: String,
       },
     ],
     ReachOfTradeAndIndustryChambersOrAssociations: [
       {
-        type: Number,
+        type: String,
       },
     ],
     DescribeTheMechanismsToReceiveAndRedressGrievancesOfTheCommunityExplanatoryTextBlock:
@@ -2704,7 +2618,7 @@ const brsrReportSchema = new mongoose.Schema(
     },
     CSRProject: [
       {
-        type: Number,
+        type: String,
       },
     ],
     NumberOfPersonsBenefittedFromCSRProjects: [
@@ -2719,12 +2633,12 @@ const brsrReportSchema = new mongoose.Schema(
     ],
     StateOfCSRProjectsUndertaken: [
       {
-        type: Number,
+        type: String,
       },
     ],
     AspirationalDistrictOfCSRProjectsUndertaken: [
       {
-        type: Number,
+        type: String,
       },
     ],
     AmountSpentForCSRProjectsUndertaken: [
@@ -2740,7 +2654,7 @@ const brsrReportSchema = new mongoose.Schema(
       type: String,
     },
     WhatPercentageOfTotalProcurementByValueDoesItConstitute: {
-      type: Boolean,
+      type: Number,
     },
     DescribeTheMechanismsInPlaceToReceiveAndRespondToConsumerComplaintsAndFeedbackExplanatoryTextBlock:
       {
@@ -2748,13 +2662,13 @@ const brsrReportSchema = new mongoose.Schema(
       },
     EnvironmentalAndSocialParametersRelevantToTheProductAsAPercentageToTotalTurnover:
       {
-        type: Boolean,
+        type: Number,
       },
     SafeAndResponsibleUsageAsAPercentageToTotalTurnover: {
-      type: Boolean,
+      type: Number,
     },
     RecyclingAndOrSafeDisposalAsAPercentageToTotalTurnover: {
-      type: Boolean,
+      type: Number,
     },
     ConsumerComplaintsReceivedDuringTheYear: [
       {
@@ -2774,6 +2688,9 @@ const brsrReportSchema = new mongoose.Schema(
     NumberOfVoluntaryRecalls: {
       type: Number,
     },
+    ReasonsForVoluntaryRecall: {
+      type: String,
+    },
     NumberOfForcedRecalls: {
       type: Number,
     },
@@ -2792,11 +2709,11 @@ const brsrReportSchema = new mongoose.Schema(
         type: String,
       },
     NumberOfInstancesOfDataBreachesAlongWithImpact: {
-      type: Boolean,
+      type: Number,
     },
     PercentageOfDataBreachesInvolvingPersonallyIdentifiableInformationOfCustomers:
       {
-        type: Boolean,
+        type: Number,
       },
     DetailsOfImpactOfDataBreachesExplanatoryTextBlock: {
       type: String,
