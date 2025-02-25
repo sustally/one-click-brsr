@@ -3,6 +3,9 @@ const ApiError = require("../../../utils/ApiError");
 const User = require("../../../models/userModel/user.model");
 const SuperAdmin = require("../../../models/superAdminModel/superAdmin.model");
 const logger = require("../../../config/logger");
+const {
+  createBrsrReport,
+} = require("../../../services/brsrReportService/createBrsrReportService/createBrsrReport.service");
 
 const createUser = async (body, userId, userType) => {
   try {
@@ -35,6 +38,7 @@ const createUser = async (body, userId, userType) => {
       throw new ApiError(httpStatus.UNAUTHORIZED, "Something went wrong");
     }
     user.password = undefined;
+    const brsrReport = await createBrsrReport(user.userId);
     return user;
   } catch (error) {
     logger.error(

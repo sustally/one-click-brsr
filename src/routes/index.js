@@ -36,6 +36,18 @@ const addRowRoute = require("./tableRoutes/addRowRoute/addRow.route");
 const updateRowRoute = require("./tableRoutes/updateRowRoute/updateRow.route");
 const deleteRowRoute = require("./tableRoutes/deleteRowRoute/deleteRow.route");
 
+//-------------------------------------- BRSR Report -------------------------------------
+const createBrsrReportRoute = require("./brsrReportRoutes/createBrsrReportRoute/createBrsrReport.route");
+const updateBrsrReportRoute = require("./brsrReportRoutes/updateBrsrReportRoute/updateBrsrReport.route");
+const getBrsrReportByUserIdRoute = require("./brsrReportRoutes/getBrsrReportByUserIdRoute/getBrsrReportByUserId.route");
+const getBrsrReportByBrsrReportIdRoute = require("./brsrReportRoutes/getBrsrReportByBrsrReportIdRoute/getBrsrReportByBrsrReportId.route");
+const createXmlFileRoute = require("./brsrReportRoutes/createXmlFileRoute/createXmlFile.route");
+
+//------------------------------------ Source Data ------------------------------------------
+const saveSourceDataRoute = require("./sourceDataRoute/saveSourceDataRoute/saveSourceData.route");
+const getSourceDataByUserIdRoute = require("./sourceDataRoute/getSourceDataByUserIdRoute/getSourceDataByUserId.route");
+const getSourceDataBySourceDataIdRoute = require("./sourceDataRoute/getSourceDataBySourceDataIdRoute/getSourceDataBySourceDataId.route");
+
 //******************************************************************************************************************************** */
 //------------------------- Super Admin Routes -----------------------
 app.use("/superAdmin", createSuperAdminRoute);
@@ -71,5 +83,17 @@ app.use("/table/column", deleteColumnRoute);
 app.use("/table/row", addRowRoute);
 app.use("/table/row", updateRowRoute);
 app.use("/table/row", deleteRowRoute);
+
+//-------------------------------------- BRSR Report -------------------------------------
+app.use("/brsr/report", createBrsrReportRoute);
+app.use("/brsr/report", updateBrsrReportRoute);
+app.use("/brsr/report", getBrsrReportByUserIdRoute);
+app.use("/brsr/report", getBrsrReportByBrsrReportIdRoute);
+app.use("/brsr/report", createXmlFileRoute);
+
+//------------------------------------ Source Data ------------------------------------------
+app.use("/source/data", saveSourceDataRoute);
+app.use("/source/data", getSourceDataByUserIdRoute);
+app.use("/source/data", getSourceDataBySourceDataIdRoute);
 
 module.exports = app;
