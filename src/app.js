@@ -21,7 +21,7 @@ if (config.env !== "test") {
 }
 
 // set security HTTP headers
-app.use(helmet());
+// app.use(helmet());
 
 // Parse JSON request body and handle large payloads
 app.use(express.json({ limit: "100mb" })); // For parsing application/json
@@ -45,16 +45,17 @@ app.use("/api/v1", routes);
 
 // Static file serving (Make sure `client/out` exists)
 app.use(express.static(path.resolve(__dirname, "public")));
+console.log(path.resolve(__dirname, "public"));
 
 /* Front end build */
-app.use(express.static(path.join(__dirname, "client/out")));
+app.use(express.static(path.join(__dirname, "../client/out")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/out", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/out", "index.html"));
 });
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/out", "[slug].html"));
+  res.sendFile(path.join(__dirname, "../client/out", "dynamic-routing.html"));
 });
 
 // send back a 404 error for any unknown api request
